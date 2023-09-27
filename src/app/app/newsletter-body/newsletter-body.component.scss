@@ -1,0 +1,69 @@
+@use "/src/styles.scss" as global;
+
+$value-24px: 24px;
+
+.newsletter-body h1 {
+    font-weight: bold;
+    font-size: 38px;
+    margin-bottom: 14px;
+}
+
+.newsletter-body {
+    padding: 0px $value-24px;
+    color: global.$dark-slate-grey;
+    line-height: 1.6;
+    width: calc(100% - (2 * $value-24px));
+}
+
+.newsletter-body ul {
+    padding-left: 0px;
+}
+
+.newsletter-body ul li {
+    background: url(/assets/images/icon-list.svg) no-repeat left top;
+    padding: 0px 0px 12px 32px;
+    list-style: none;
+}
+
+.newsletter-body form label {
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.newsletter-body form input {
+    width: calc(100% - (2 * $value-24px));
+    padding: 18px $value-24px;
+    border-radius: 10px;
+    border: 1px solid global.$grey;
+    font-size: 16px;
+    cursor: pointer;
+    color: global.$dark-slate-grey;
+    margin-bottom: $value-24px;
+}
+
+.newsletter-body form input:hover,
+.newsletter-body form input:active {
+    border-color: global.$dark-slate-grey;
+}
+
+.newsletter-body form input::placeholder {
+    color: global.$grey;
+}
+
+.newsletter-body form button {
+    color: global.$white;
+    background-color: global.$dark-slate-grey;
+    border-style: none;
+    border-radius: 10px;
+    perspective: 1px;
+    padding: 18px $value-24px;
+    width: 100%;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    margin-bottom: $value-24px;
+}
+
+.newsletter-img img {
+    width: 100%;
+}
