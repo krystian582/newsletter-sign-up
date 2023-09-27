@@ -2,6 +2,14 @@
 
 $value-24px: 24px;
 
+.newsletter-content {
+    background-color: global.$white;
+}
+
+.newsletter-img img {
+    width: 100%;
+}
+
 .newsletter-body h1 {
     font-weight: bold;
     font-size: 38px;
@@ -36,18 +44,8 @@ $value-24px: 24px;
     border-radius: 10px;
     border: 1px solid global.$grey;
     font-size: 16px;
-    cursor: pointer;
     color: global.$dark-slate-grey;
     margin-bottom: $value-24px;
-}
-
-.newsletter-body form input:hover,
-.newsletter-body form input:active {
-    border-color: global.$dark-slate-grey;
-}
-
-.newsletter-body form input::placeholder {
-    color: global.$grey;
 }
 
 .newsletter-body form button {
@@ -59,11 +57,57 @@ $value-24px: 24px;
     padding: 18px $value-24px;
     width: 100%;
     font-size: 16px;
-    font-weight: 500;
-    cursor: pointer;
+    font-weight: 600;
     margin-bottom: $value-24px;
 }
 
-.newsletter-img img {
-    width: 100%;
+.newsletter-body form input::placeholder {
+    color: global.$grey;
+}
+
+// PC
+@media only screen and (min-width: 768px) {
+    .newsletter-content {
+        display: flex;
+        flex-direction: row-reverse;
+        // justify-content: center;
+        width: 80%;
+        border-radius: 24px;
+        padding: $value-24px;
+    }
+
+    .newsletter-body {
+        width: 50%;
+        margin-right: $value-24px;
+    }
+
+    .newsletter-content h1 {
+        font-size: 64px;
+    }
+
+    .newsletter-img {
+        width: 50%;
+        margin-left: $value-24px;
+    }
+
+    .newsletter-img img {
+        height: 100%;
+        object-fit: cover;
+        border-radius: 12px;
+    }
+
+    .newsletter-body form input:hover,
+    .newsletter-body form input:active {
+        border-color: global.$dark-slate-grey;
+    }
+
+    .newsletter-body form input:hover,
+    .newsletter-body form button:hover {
+        cursor: pointer;
+    }
+
+    .newsletter-body form button:hover {
+        // background-color: global.$primary-color;
+        background-image: linear-gradient(to right, rgb(241, 80, 104), global.$primary-color);
+    }
 }
