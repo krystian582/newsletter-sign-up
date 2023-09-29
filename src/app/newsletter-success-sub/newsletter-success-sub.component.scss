@@ -20,8 +20,23 @@
     margin-bottom: 32px;
 }
 
+// PC
 @media only screen and (min-width: 768px) {
     .newsletter-contener {
         background-color: global.$white;
+        height: fit-content;
+        max-width: 400px;
+        border-radius: 24px;
+        padding: calc(2 * global.$value-24px);
+    }
+
+    .newlsetter-interactive {
+        // display: block;
+        margin: 24px 0px 0px 0px;
+    }
+
+    .newlsetter-interactive .newsletter-button {
+        // display: block;
+        margin: 0px;
     }
 }
