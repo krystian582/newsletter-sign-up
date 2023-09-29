@@ -15,15 +15,15 @@
       <li>And much more!</li>
     </ul>
 
-    <form>
+    <form (ngSubmit)="onSubmit()" [formGroup]="signupForm">
       <div>
         <label for="email">Email address</label>
       </div>
       <div>
-        <input type="email" name="email" placeholder="email@company.com">
+        <input type="email" name="email" placeholder="email@company.com" formControlName="email">
       </div>
       <div>
-        <button type="submit" class="newsletter-button">Subscribe to monthly newsletter</button>
+        <button type="submit" class="newsletter-button" [disabled]="!signupForm.valid">Subscribe to monthly newsletter</button>
       </div>
     </form>
   </div>
