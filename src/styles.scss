@@ -60,6 +60,10 @@ app-root {
     margin-bottom: $value-24px;
 }
 
+.newsletter-button:disabled {
+    background-color: $grey;
+    cursor: not-allowed;
+}
 
 @media only screen and (min-width: 768px) {
     body {
@@ -84,5 +88,11 @@ app-root {
     .newsletter-button:hover {
         cursor: pointer;
         background-image: linear-gradient(to right, rgb(241, 80, 104), $primary-color);
+    }
+
+    .newsletter-button:disabled:hover {
+        background-color: $grey;
+        background-image: none;
+        cursor: not-allowed;
     }
 }
