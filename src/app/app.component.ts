@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { NewsletterBodyComponent } from './app/newsletter-body/newsletter-body.component';
+import { NewsletterBodyComponent } from './newsletter-body/newsletter-body.component';
 
 @Component({
   standalone: true,
