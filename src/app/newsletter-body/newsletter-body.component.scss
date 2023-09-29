@@ -33,6 +33,10 @@
     margin-bottom: global.$value-24px;
 }
 
+.newsletter-body form input.ng-invalid.ng-touched {
+    border: 1px red solid;
+}
+
 .newsletter-body form input::placeholder {
     color: global.$grey;
 }

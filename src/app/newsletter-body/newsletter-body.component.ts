@@ -1,3 +1,4 @@
+import { NgIf } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, FormsModule, ReactiveFormsModule, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
@@ -7,7 +8,7 @@ import { Router } from '@angular/router';
   selector: 'app-newsletter-body',
   templateUrl: './newsletter-body.component.html',
   styleUrls: ['./newsletter-body.component.scss'],
-  imports: [FormsModule, ReactiveFormsModule]
+  imports: [FormsModule, ReactiveFormsModule, NgIf]
 })
 export class NewsletterBodyComponent implements OnInit{
   signupForm: FormGroup;
