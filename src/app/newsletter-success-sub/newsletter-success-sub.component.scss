@@ -1,0 +1,27 @@
+@use '/src/styles.scss' as global;
+
+.newsletter-contener {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: global.$value-24px;
+    height: 100vh;
+    color: global.$dark-slate-grey;
+}
+
+.newsletter-body {
+    padding: 0px;
+    width: 100%;
+}
+
+.newlsetter-interactive {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 32px;
+}
+
+@media only screen and (min-width: 768px) {
+    .newsletter-contener {
+        background-color: global.$white;
+    }
+}

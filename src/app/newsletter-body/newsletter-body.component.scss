@@ -1,26 +1,11 @@
 @use "/src/styles.scss" as global;
 
-$value-24px: 24px;
-
 .newsletter-content {
     background-color: global.$white;
 }
 
 .newsletter-img img {
     width: 100%;
-}
-
-.newsletter-body h1 {
-    font-weight: bold;
-    font-size: 38px;
-    margin-bottom: 14px;
-}
-
-.newsletter-body {
-    padding: 0px $value-24px;
-    color: global.$dark-slate-grey;
-    line-height: 1.6;
-    width: calc(100% - (2 * $value-24px));
 }
 
 .newsletter-body ul {
@@ -39,26 +24,13 @@ $value-24px: 24px;
 }
 
 .newsletter-body form input {
-    width: calc(100% - (2 * $value-24px));
-    padding: 18px $value-24px;
+    width: calc(100% - (2 * global.$value-24px));
+    padding: 18px global.$value-24px;
     border-radius: 10px;
     border: 1px solid global.$grey;
     font-size: 16px;
     color: global.$dark-slate-grey;
-    margin-bottom: $value-24px;
-}
-
-.newsletter-body form button {
-    color: global.$white;
-    background-color: global.$dark-slate-grey;
-    border-style: none;
-    border-radius: 10px;
-    perspective: 1px;
-    padding: 18px $value-24px;
-    width: 100%;
-    font-size: 16px;
-    font-weight: 600;
-    margin-bottom: $value-24px;
+    margin-bottom: global.$value-24px;
 }
 
 .newsletter-body form input::placeholder {
@@ -72,21 +44,12 @@ $value-24px: 24px;
         flex-direction: row-reverse;
         // justify-content: center;
         border-radius: 24px;
-        padding: $value-24px;
-    }
-
-    .newsletter-body {
-        width: 50%;
-        margin-right: $value-24px;
-    }
-
-    .newsletter-content h1 {
-        font-size: 64px;
+        padding: global.$value-24px;
     }
 
     .newsletter-img {
         width: 50%;
-        margin-left: $value-24px;
+        margin-left: global.$value-24px;
     }
 
     .newsletter-img img {
@@ -97,16 +60,7 @@ $value-24px: 24px;
 
     .newsletter-body form input:hover,
     .newsletter-body form input:active {
-        border-color: global.$dark-slate-grey;
-    }
-
-    .newsletter-body form input:hover,
-    .newsletter-body form button:hover {
         cursor: pointer;
-    }
-
-    .newsletter-body form button:hover {
-        // background-color: global.$primary-color;
-        background-image: linear-gradient(to right, rgb(241, 80, 104), global.$primary-color);
+        border-color: global.$dark-slate-grey;
     }
 }

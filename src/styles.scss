@@ -1,4 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
+$value-24px: 24px;
+
 $primary-color: hsl(4, 100%, 67%);
 
 $dark-slate-grey: hsl(234, 29%, 20%);
@@ -26,16 +28,61 @@ body {
     margin: 0px;
 }
 
+app-root {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.newsletter-head {
+    font-weight: bold;
+    font-size: 38px;
+    margin-bottom: 14px;
+}
+
+.newsletter-body {
+    padding: 0px $value-24px;
+    color: $dark-slate-grey;
+    line-height: 1.6;
+    width: calc(100% - (2 * $value-24px));
+}
+
+.newsletter-button {
+    color: $white;
+    background-color: $dark-slate-grey;
+    border-style: none;
+    border-radius: 10px;
+    perspective: 1px;
+    padding: 18px $value-24px;
+    width: 100%;
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: $value-24px;
+}
+
+
 @media only screen and (min-width: 768px) {
     body {
         background-color: $charcoal-grey;
     }
 
     app-root {
-        display: flex;
-        height: 100vh;
+        flex-wrap: wrap;
         align-content: center;
         justify-content: center;
-        flex-wrap: wrap;
+    }
+
+    .newsletter-head {
+        font-size: 64px;
+    }
+
+    .newsletter-body {
+        width: 50%;
+        margin-right: $value-24px;
+    }
+
+    .newsletter-button:hover {
+        cursor: pointer;
+        background-image: linear-gradient(to right, rgb(241, 80, 104), $primary-color);
     }
 }

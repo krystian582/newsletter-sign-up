@@ -7,5 +7,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./newsletter-success-sub.component.scss']
 })
 export class NewsletterSuccessSubComponent {
+  email = 'ash@loremcompany.com';
 
 }
